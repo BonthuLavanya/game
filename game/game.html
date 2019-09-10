@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<style>
+.button{ 
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 32px;
+  cursor: pointer;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
+.button:hover {background: #6EBEEA;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+.dice{
+    width:64px;
+    border:#999 1px solid;
+    padding:20px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+}
+#die1{
+    position:fixed;
+    top: 75%;
+    left: 85%;
+    width:10em;
+    height:3em;
+    margin-top: -9em;
+    margin-left: -15em;
+    border: 1px solid #88d3fc;
+    background-color:#88d3fc;
+    border-width:5px;  
+    border-style:outset;
+
+}
+#die2{
+    position:fixed;
+    top: 75%;
+    left:55%;
+    width:10em;
+    height:3em;
+    margin-top: -9em;
+    margin-left: -15em; 
+    border: 1px solid #88d3fc;
+    background-color: #88d3fc;
+    border-width:5px;  
+    border-style:outset;
+}
+body  {
+  background-image: url("img.png");
+  background-color: #cccccc;
+}
+input[type="button"] {
+    padding-left: 25px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+.score1{
+  font-size: 125%;
+}
+.score2{
+  font-size: 125%;
+}
+</style>
+<script  src=game.js>
+</script>
+</head>
+<body>
+<div id="die1" class="dice">0</div>
+<div id="die2" class="dice">0</div>
+<div style = "position:fixed; left:850px; top:150px;"><button class="button button1" onclick="rolldice(rows, cols)">Roll Dice</button></div>
+<div style = "position:fixed; left:700px; bottom:450px"><h2 id="status" style="clear:left;"></h2></div>
+<button onclick="aboutgame()" style='font-size:24px'> About Game <i class='fas fa-lightbulb'></i></button>
+<div style = "position:fixed;  top:50px"><button onclick="getConfirmation()" style='font-size:24px'>Restart Game<i class='fas fa-undo-alt'></i></button></div>
+<div class="score1" style = "font-family:verdana; position:fixed;  top:0px; left:550px"><p id="player1" style="clear:left;"></p></div>
+<div class="score2" style = "font-family:verdana; position:fixed;  top:0px; left:1050px"><p id="player2" style="clear:left;"></p></div>
+</body>
+</html>
